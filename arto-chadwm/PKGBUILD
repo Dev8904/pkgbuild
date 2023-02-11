@@ -1,17 +1,17 @@
 # Maintainer: Erik Dubois <erik.dubois@gmail.com>
-pkgname=edu-chadwm-git
+pkgname=arto-chadwm-git
 _pkgname=chadwm
 _destname1="/etc/skel/.config/"
 #_destname2="/usr/share/doc/dwm/"
 #_destname3="/usr/share/licenses/dwm/"
 #_destname4="/usr/share/man/man1/"
 _destname5="/usr/share/xsessions/"
-_licensedir="/usr/share/arcolinux/licenses/"
+_licensedir="/usr/share/artolinux/licenses/"
 pkgver=22.12
 pkgrel=01
 pkgdesc="Configuration files for Chadwm"
 arch=('any')
-url="https://github.com/erikdubois/edu-chadwm"
+url="https://github.com/Dev8904/arto-chadwm"
 license=('GPL3')
 makedepends=('git')
 depends=('xorg-server'
@@ -20,8 +20,8 @@ depends=('xorg-server'
 			 'wget'
 			 'picom'
 			 'rofi'
-			 'arcolinux-rofi-git'
-			 'arcolinux-rofi-themes-git'
+			 'artolinux-rofi-git'
+			 'artolinux-rofi-themes-git'
 			 'acpi'
 			 'imlib2'
 			 'slock'
@@ -39,13 +39,13 @@ sha256sums=('SKIP')
 install='readme.install'
 
 build() {
-  cd "$srcdir/$_pkgname/root/etc/skel/.config/arco-chadwm/chadwm"
+  cd "$srcdir/$_pkgname/root/etc/skel/.config/arto-chadwm/chadwm"
   make
 }
 
 package() {
 
-  cd "$srcdir/$_pkgname/root/etc/skel/.config/arco-chadwm/chadwm"
+  cd "$srcdir/$_pkgname/root/etc/skel/.config/arto-chadwm/chadwm"
   make PREFIX=/usr DESTDIR="$pkgdir" install
 
 	install -dm755 ${pkgdir}${_destname1}

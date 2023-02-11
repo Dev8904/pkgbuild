@@ -1,7 +1,7 @@
 #!/bin/bash
 #https://wiki.archlinux.org/index.php/DeveloperWiki:Building_in_a_Clean_Chroot
 
-destination1=$HOME"/DATA/EDU/nemesis_repo/x86_64/"
+destination1=$HOME"/DATA/ARTO/arto_repo/x86_64/"
 
 destiny=$destination1
 
@@ -23,7 +23,7 @@ do
 done
 
 search1=$(basename "$PWD")
-search2=arcolinux
+search2=artolinux
 
 search=$search1
 rm -rf /tmp/tempbuild
