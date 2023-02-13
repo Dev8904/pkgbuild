@@ -1,0 +1,18 @@
+post_install() {
+    cd /etc/skel/.config/arto-chadwm/chadwm
+    echo -e "\n** Making ArtoLinux Chadwm **\n"
+    make -B
+    echo -e "\n** Installing ArtoLinux Chadwm **\n"
+    make install
+    echo
+    echo -e "\n** The files have been installed in /etc/skel/.config/arto-chadwm **\n"
+    echo
+    echo "Install artolinux-chadwm-pacman-hook-git to ensure"
+    echo "that you can update and still keep your own config in use"
+    echo "Chadwm like Dwm and Dusk need to be build"
+    echo
+}
+
+post_upgrade() {
+    post_install
+}

@@ -1,7 +1,7 @@
 # Maintainer: Erik Dubois <erik.dubois@gmail.com>
 pkgname=artolinux-rofi-git
 _pkgname=artolinux-rofi
-_destname1="/etc/skel/.config/rofi"
+_destname1="/etc/skel/.config/rofi/"
 _licensedir="/usr/share/artolinux/licenses/"
 pkgver=22.12
 pkgrel=01
@@ -12,14 +12,16 @@ license=('GPL3')
 makedepends=('git')
 depends=('bash')
 provides=("${pkgname}")
+conflicts=('rofi')
 options=(!strip !emptydirs)
 source=(${_pkgname}::"git+https://github.com/Dev8904/${_pkgname}.git")
 sha256sums=('SKIP')
 install='readme.install'
 package() {
-	#install -dm755 ${pkgdir}${_licensedir}${_pkgname}
-	#install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
 
-	install -dm755 ${pkgdir}${_destname1}
-	cp -r  ${srcdir}/${_pkgname}/root/${_destname1}* ${pkgdir}${_destname1}
+ 	install -dm 755 ${pkgdir}${_destname1}
+	rm -r ${srcdir}/${_pkgname}/.git*
+	rm ${srcdir}/${_pkgname}/setup*
+	rm ${srcdir}/${_pkgname}/up*
+	cp -r ${srcdir}/${_pkgname}${_destname1}/* ${pkgdir}${_destname1}
 }

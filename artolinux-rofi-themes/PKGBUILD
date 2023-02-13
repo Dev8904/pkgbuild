@@ -1,13 +1,13 @@
 # Maintainer: Erik Dubois <erik.dubois@gmail.com>
 pkgname=artolinux-rofi-themes-git
-_pkgname=artolinux-rofi-theme
+_pkgname=artolinux-rofi-themes
 _destname1="/usr/share/rofi/themes/"
 _licensedir="/usr/share/artolinux/licenses/"
 pkgver=22.12
 pkgrel=01
 pkgdesc="Rofi Theme"
 arch=('any')
-url="https://github.com/Dev8904/arto-skel"
+url="https://github.com/Dev8904/artolinux-rofi-themes"
 license=('GPL3')
 makedepends=('git')
 depends=('bash')
@@ -20,6 +20,9 @@ package() {
 	#install -dm755 ${pkgdir}${_licensedir}${_pkgname}
 	#install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
 
-	install -dm755 ${pkgdir}${_destname1}
-	cp -r  ${srcdir}/${_pkgname}/root/${_destname1}* ${pkgdir}${_destname1}
+	install -dm 755 ${pkgdir}${_destname1}
+	rm -r ${srcdir}/${_pkgname}/.git*
+	rm ${srcdir}/${_pkgname}/setup*
+	rm ${srcdir}/${_pkgname}/up*
+	cp -r ${srcdir}/${_pkgname}${_destname1}/* ${pkgdir}${_destname1}
 }
