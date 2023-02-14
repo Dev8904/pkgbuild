@@ -29,7 +29,9 @@ depends=('xorg-server'
 			 'ttf-material-design-iconic-font'
 			 'ttf-iosevka-nerd'
 			 'eww'
-			 'dash')
+			 'dash'
+			 'archlinux-logout-git'
+			 'sxhkd')
 optdepends=()
 conflicts=()
 provides=("${pkgname}")
