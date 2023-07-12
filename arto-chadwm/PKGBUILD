@@ -20,8 +20,6 @@ depends=('xorg-server'
 			 'wget'
 			 'picom'
 			 'rofi'
-			 'artolinux-rofi-git'
-			 'artolinux-rofi-themes-git'
 			 'acpi'
 			 'imlib2'
 			 'slock'
@@ -30,7 +28,6 @@ depends=('xorg-server'
 			 'ttf-iosevka-nerd'
 			 'eww'
 			 'dash'
-			 'archlinux-logout-git'
 			 'sxhkd')
 optdepends=()
 conflicts=()
