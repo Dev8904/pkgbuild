@@ -26,7 +26,6 @@ depends=('xorg-server'
 			 'imlib2'
 			 'ttf-material-design-iconic-font'
 			 'ttf-iosevka-nerd'
-			 'eww'
 			 'dash'
 			 'sxhkd')
 optdepends=()
