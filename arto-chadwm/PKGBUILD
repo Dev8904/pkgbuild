@@ -7,7 +7,7 @@ _destname2="/usr/bin/"
 #_destname4="/usr/share/man/man1/"
 _destname5="/usr/share/xsessions/"
 _licensedir="/usr/share/artolinux/licenses/"
-pkgver=22.12
+pkgver=23.07
 pkgrel=01
 pkgdesc="Configuration files for Chadwm"
 arch=('any')
@@ -27,7 +27,9 @@ depends=('xorg-server'
 			 'ttf-material-design-iconic-font'
 			 'ttf-iosevka-nerd'
 			 'dash'
-			 'sxhkd')
+			 'brightnessctl'
+			 'kitty'
+			 )
 optdepends=()
 conflicts=()
 provides=("${pkgname}")
